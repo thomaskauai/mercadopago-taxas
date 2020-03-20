@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+input, button, select {
+  width: 100%;
+  height: 50px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  outline: none;
+  -webkit-appearance: none;
+}
+input::placeholder, button::placeholder, select::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+body {
+  font-family: sans-serif;
+  background: #005e87;
+  padding: 40px 0;
+}
+
+#app {
+  text-align: center;
+  max-width: 400px;
+  margin: auto;
+  padding: 0 40px;
+  box-sizing: content-box;
+}
+#app h1 {
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.calc > * {
+  width: 100%;
+  display: block;
+}
+.calc input, .calc select {
+  padding: 0 15px;
+  background: rgba(0, 0, 0, 0.2);
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+.calc input option, .calc select option {
+  background: #003b54;
+}
+.calc button {
+  background: white;
+  height: 64px;
+  color: #005e87;
+  margin-top: 5px;
+  font: 700 17px sans-serif;
+  cursor: pointer;
+  transition: .2s;
+}
+.calc button:hover {
+  background: #baeaff;
+}
+
+.result {
+  font-size: 18px;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+}
+.result b {
+  font-size: 120%;
+}

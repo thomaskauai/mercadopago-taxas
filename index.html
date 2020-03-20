@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - AppTaxas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<section id="app">
+  
+  <h1>Calcular taxas<br> MercadoPago</h1>
+       
+    <section class="calc">
+      <input type="number" placeholder="Quanto quer receber?" v-model="sellValue" pattern="[0-9]*">  
+      <select v-model="parcelaSelected">
+        <option selected disabled value="0">Quantidade de parcelas</option>
+        <option v-for="(tax, x) in taxasParcela" v-bind:value="tax">
+          {{x}} vezes
+        </option>
+      </select>
+      <button @click="calcTaxes">Calcular valor a ser cobrado</button>      
+    </section>
+  
+  <div v-if="result" class="result">
+    <span>Valor a ser cobrado:</span>
+    <b>R${{formatNumber(result)}}</b>
+  </div> 
+  
+</section>
+<!-- partial -->
+  <script src='https://unpkg.com/vue'></script>
+<script src='https://momentjs.com/downloads/moment-with-locales.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
