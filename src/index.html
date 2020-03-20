@@ -1,0 +1,21 @@
+<section id="app">
+  
+  <h1>Calcular taxas<br> MercadoPago</h1>
+       
+    <section class="calc">
+      <input type="number" placeholder="Quanto quer receber?" v-model="sellValue" pattern="[0-9]*">  
+      <select v-model="parcelaSelected">
+        <option selected disabled value="0">Quantidade de parcelas</option>
+        <option v-for="(tax, x) in taxasParcela" v-bind:value="tax">
+          {{x}} vezes
+        </option>
+      </select>
+      <button @click="calcTaxes">Calcular valor a ser cobrado</button>      
+    </section>
+  
+  <div v-if="result" class="result">
+    <span>Valor a ser cobrado:</span>
+    <b>R${{formatNumber(result)}}</b>
+  </div> 
+  
+</section>
