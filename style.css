@@ -77,3 +77,4 @@ body {
 .result b {
   font-size: 120%;
 }
+.result .x {border-top: 1px solid rgba(#fff,.2); margin-top: 15px; padding-top: 15px;}
