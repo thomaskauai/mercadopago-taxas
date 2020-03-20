@@ -29,9 +29,9 @@ const app = new Vue({
   methods: {
     
     calcTaxes() {
-      this.result = this.sellValue / ( 100 - (this.fixedTax + parseInt(this.parcelaSelected)) ) * 100;
+      this.result = this.sellValue / ( 100 - (this.fixedTax + parseInt(this.taxasParcela[this.parcelaSelected])) ) * 100;
       
-      console.log(parseFloat(this.parcelaSelected));
+      //console.log(parseFloat(this.parcelaSelected));
       
       // / (100 - (this.fixedTax + this.parcelaSelected) * 100);
       //40,00 ÷ (100 – (3,60+16,15) ) x 100
