@@ -16,7 +16,7 @@
       <input type="number" placeholder="Quanto quer receber?" v-model="sellValue" pattern="[0-9]*">  
       <select v-model="parcelaSelected">
         <option selected disabled value="0">Quantidade de parcelas</option>
-        <option v-for="(tax, x) in taxasParcela" v-bind:value="tax">
+        <option v-for="(tax, x) in taxasParcela" v-bind:value="x">
           {{x}} vezes
         </option>
       </select>
