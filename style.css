@@ -45,7 +45,7 @@ body {
 .calc input, .calc select {
   padding: 0 25px;
   background: rgba(0, 0, 0, 0.2);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   color: rgba(255, 255, 255, 0.9);
   font-size: 15px;
   letter-spacing: 0.5px;
